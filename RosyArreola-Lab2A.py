@@ -70,7 +70,6 @@ class EmployeeID:
             #print("ID #", key, " found ", counter, " times")
         return isFound
 
-
 # Read each line and create linked list
 def read_lines(file_name, h):
     list = h
@@ -133,7 +132,7 @@ def splitList(llist):
 
         while front is not None:
             front = front.head.next
-            if front is not None
+            if front is not None:
                 front = front.head.next
                 mid = mid.head.next
         left_h = llist
@@ -160,15 +159,6 @@ def mergeLists(left, right):
         curr.head.next = left
     return h.head.next
 
-
-
-
-#     item1 = llist
-#     item2 = llist.head.next
-#     for i in range(len(item1)):
-#         for j in range(len(item2)):
-
-
 # Create activision list
 activision = EmployeeID()
 activision = read_lines('activision.txt', activision)
@@ -180,14 +170,13 @@ vivendi = read_lines('vivendi.txt', vivendi)
 # Append both lists
 full_list = activision
 full_list.append(vivendi)
-#compareAll(full_list)
-#full_list.printList(full_list.head)
+compareAll(full_list)
+full_list.printList(full_list.head)
 bubbleSort(full_list)
 
-
 ### TRAVERSAL
-# n = EmployeeID()
-# n.head = full_list.head.next
-# n.printItem(n.head)
-# n.head = n.head.prev
-# n.printItem(n.head)
+n = EmployeeID()
+n.head = full_list.head.next
+n.printItem(n.head)
+n.head = n.head.prev
+n.printItem(n.head)
